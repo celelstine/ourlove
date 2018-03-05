@@ -1,0 +1,3 @@
+graft ourlove/templates
+graft ourlove/static
+graft ourlove/models
