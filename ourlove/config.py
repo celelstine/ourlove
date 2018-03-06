@@ -6,10 +6,8 @@ class Config(object):
     DEBUG = False
     TESTING = False
     CSRF_ENABLED = True
-    SECRET_KEY = os.environ('SECRET_KEY', "--00jkbsjbsjbskb92902292bjbsjbsk|||kjs")
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
-    LC_ALL=en_GB.UTF-8
-    LANG=en_GB.UTF-8
+    SECRET_KEY = os.getenv('SECRET_KEY', "--00jkbsjbsjbskb92902292bjbsjbsk|||kjs")
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'postgresql://cele:smilesh2o@localhost:5432/ourlove')
 
 class ProductionConfig(Config):
     DEBUG = False
